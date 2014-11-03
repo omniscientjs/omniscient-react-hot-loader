@@ -7,28 +7,13 @@ module.exports = {
     './js/index'
   ],
 
-  output: {
-    path: __dirname + '/public',
-    publicPath: '/js/'
-  },
+  output: { path: __dirname + '/public', publicPath: '/js/' },
 
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
+  resolve: { extensions: ['', '.js', '.jsx'] },
 
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        loaders: [
-          'jsx-loader?harmony',
-          __dirname + '/../' // when using, change this for 'omniscient-hot-reload-loader' from npm
-        ]
-      }
-    ]
+    loaders: [{ test: /\.js$/, loaders: [ 'jsx-loader?harmony', 'omniscient-hot-reload-loader' ] }]
   },
 
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  plugins: [ new webpack.HotModuleReplacementPlugin() ]
 };
