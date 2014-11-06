@@ -1,6 +1,6 @@
-var component = require('omniscient'),
+var React = require('react'),
     immstruct = require('immstruct'),
-    React = require("react");
+    component = require('omniscient');
 
 var Clicks = require('./clicks').jsx;
 
