@@ -1,4 +1,7 @@
 module.exports = function (src) {
+  if (this.cacheable) {
+    this.cacheable();
+  }
 
   var omniscientReloadablePath = require.resolve('./omniscient-reloadable').replace('.js', '');
 
