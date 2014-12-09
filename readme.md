@@ -7,4 +7,4 @@ By substituting calls to `component('SomeComponent', function() { ... )` with co
 
 All credit for this code goes to [react-hot-loader](https://github.com/gaearon/react-hot-loader). React hot loader work for normal React classes, and the code is based off of this module, adapted to work with Omniscient.
 
-![Omniscient Hot Reloader Gif](https://github.com/omniscientjs/omniscient-hot-reload-loader/blob/master/omniscient-hot-relad-loader.gif)
+![Omniscient Hot Reloader Gif](https://github.com/omniscientjs/omniscient-hot-reload-loader/blob/master/omniscient-hot-reload-loader.gif)
