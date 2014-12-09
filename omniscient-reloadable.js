@@ -87,7 +87,7 @@ function createUpdater (key, component) {
 function findComponentArgs (args) {
   args = [].slice.call(args);
 
-  mixinArrayOrSingle = args.filter(function(m) {
+  var mixinArrayOrSingle = args.filter(function(m) {
     return Array.isArray(m) || typeof m === 'object';
   })[0] || [];
 
