@@ -1,8 +1,0 @@
-{
-  "name": "omniscient-hot-reload-loader",
-  "version": "0.0.1",
-  "main": "index.js",
-  "author": "@torgeir",
-  "license": "mit",
-  "dependencies": []
-}
