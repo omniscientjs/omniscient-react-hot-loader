@@ -1,16 +1,14 @@
-var React = require('react'),
-    immstruct = require('immstruct'),
-    component = require('omniscient');
+import React from 'react';
+import immstruct from 'immstruct';
 
-var Clicks = require('./clicks').jsx;
+import Clicks from './clicks';
 
 var data = immstruct({ clicks: 0 });
 data.on('swap', render);
+render();
 
 function render () {
   React.render(
     <Clicks clicks={data.cursor('clicks')}/>,
     document.body);
 }
-
-render();

@@ -1,10 +1,14 @@
-# omniscient webpack hot reload loader
+# omniscient with react hot loader
 
-`omniscient-hot-reload-loader` is a webpack loader for [omniscient components](https://github.com/omniscientjs/omniscient) that lets you have hot reloading components in your development environment, i.e. components who will re-render automatically when they are changed, without a page refresh.
+Coupling [react-hot-loader](https://github.com/gaearon/react-hot-loader) with your omniscient application, your omniscient components automatically hot reload without needing a page refresh as you change the source code of your application, with your app's state kept in tact.
 
-## How it works
-By substituting calls to `component('SomeComponent', function() { ... )` with code utilizing webpacks [hot module replacement](https://github.com/webpack/docs/wiki/hot-module-replacement-with-webpack), it is possible to detect changes to a component, and patch the prototype of matching components that are already rendered with the methods of the changed component. By subsequently forcing re-render, components will automatically re-render when changed, while state will be kept in tact.
+As of react hot loader version 1.0, no source code changes are needed on the client side to enable hot reloading for your application.
 
-All credit for this code goes to [react-hot-loader](https://github.com/gaearon/react-hot-loader). React hot loader work for normal React classes, and the code is based off of this module, adapted to work with Omniscient.
+## setup
 
-![Omniscient Hot Reloader Gif](https://github.com/omniscientjs/omniscient-hot-reload-loader/blob/master/omniscient-hot-reload-loader.gif)
+- install with `npm i`
+- run the hot reloading server `npm run start`
+- load up [http://localhost:3000](http://localhost:3000)
+- watch your omniscient app hot reload while you edit and save the `clicks.js` component in your editor!
+
+![Omniscient React Hot Loader Gif](https://github.com/omniscientjs/omniscient-react-hot-loader/blob/master/omniscient-react-hot-loader.gif)

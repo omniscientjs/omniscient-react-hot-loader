@@ -1,16 +1,10 @@
-var component = require('omniscient');
-var React = require('react');
+import React from 'react';
+import component from 'omniscient';
 
-module.exports = component('Clicks', function (props) {
-  var self = this;
-  function onClick () {
-    self.props.clicks.update(clicks => clicks + 1);
-  }
-  return (
-    <p>
-      {this.props.clicks.deref()}
-      -- Text is updated on save --
-      <button onClick={onClick}>up</button>
-    </p>
-  );
-});
+export default component(({clicks}) =>
+  <p>
+    {clicks.deref()}
+    -- Text is updated on save - try editing this text in your source file after starting `npm run start` --
+    <button onClick={_ => clicks.update(n => n + 1)}>up</button>
+  </p>
+).jsx;

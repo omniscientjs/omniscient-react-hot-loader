@@ -1,19 +1,15 @@
 var webpack = require('webpack');
 
 module.exports = {
+  context: __dirname,
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/dev-server',
-    './js/index'
+    'webpack-dev-server/client?http://0.0.0.0:3000',
+    'webpack/hot/only-dev-server',
+    './js/index' // your entry point
   ],
-
   output: { path: __dirname + '/public', publicPath: '/js/' },
-
-  resolve: { extensions: ['', '.js', '.jsx'] },
-
+  plugins: [ new webpack.HotModuleReplacementPlugin(), ],
   module: {
-    loaders: [{ test: /\.js$/, loaders: [ 'jsx-loader?harmony', 'omniscient-hot-reload-loader' ] }]
-  },
-
-  plugins: [ new webpack.HotModuleReplacementPlugin() ]
+    loaders: [ { test: /\.js$/, exclude: /node_modules/, loaders: [ 'react-hot', '6to5-loader' ] } ]
+  }
 };
