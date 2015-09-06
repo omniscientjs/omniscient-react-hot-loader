@@ -10,6 +10,6 @@ module.exports = {
   output: { path: __dirname + '/public', publicPath: '/js/' },
   plugins: [ new webpack.HotModuleReplacementPlugin(), ],
   module: {
-    loaders: [ { test: /\.js$/, exclude: /node_modules/, loaders: [ 'react-hot', '6to5-loader' ] } ]
+    loaders: [ { test: /\.js$/, exclude: /node_modules/, loaders: [ 'react-hot', 'babel-loader' ] } ]
   }
 };
